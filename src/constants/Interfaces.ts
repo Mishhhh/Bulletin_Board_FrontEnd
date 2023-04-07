@@ -33,6 +33,13 @@ export interface ISetPostAction {
         posts: IPostsWithName[]
     }
 }
+export interface IReplacePostAction {
+    type: ActionTypes.REPLACE
+    payload: {
+        posts: IPostsWithName[]
+    }
+}
+
 export interface ISetSinglePostAction {
     type: ActionTypes.SET_SINGLE_POST
     payload: {

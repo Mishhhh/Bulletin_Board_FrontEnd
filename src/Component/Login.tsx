@@ -17,7 +17,11 @@ export default function Login() {
             console.log(response)
             // let thisSesion<> ={
                 console.log(response.data)
-
+            if (response.data===0){
+                alert("Invalid Credentials.")
+                return;
+            }
+            
             dispatch(setSession(response.data))
             navigate('/')
         })
