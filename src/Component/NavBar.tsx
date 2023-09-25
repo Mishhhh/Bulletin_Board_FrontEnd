@@ -37,7 +37,7 @@ function Navigation() {
 
   }
   useEffect(() => {
-    (session != null) ?
+    (session != 0) ?
       setLoginStatus("Logout") : setLoginStatus("Login")
   }, [session])
   function handleRegisterclick(): void {

@@ -24,12 +24,12 @@ export default function SinglePost(post: IPostsWithName) {
   const dispatch = useDispatch()
   React.useEffect(() => {
 
-    (session != null) ? setIsAuth(true) : setIsAuth(false)
+    (session != 0) ? setIsAuth(true) : setIsAuth(false)
 
     fetchComment(PostID)
   }, [renderComment])
   React.useEffect(() => {
-    (session != null) ? setIsAuth(true) : setIsAuth(false)
+    (session != 0) ? setIsAuth(true) : setIsAuth(false)
     getPost(PostID)
   }, [])
 
@@ -56,6 +56,8 @@ export default function SinglePost(post: IPostsWithName) {
         .catch((err) => alert(err.response.data)) : alert("Please log-in")
     console.log(PostID)
     setRenderComment(renderComment + 1)
+    
+    
   }
   const handleCommentShow = () => {
     (isAuth) ? setShowComment(true) : alert("Please log-in")

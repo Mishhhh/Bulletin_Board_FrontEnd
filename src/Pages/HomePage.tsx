@@ -42,7 +42,7 @@ export default function HomePage() {
       </div>
       <>
         {
-          (session != null) ? <AddPostButton /> : null
+          (session != 0) ? <AddPostButton /> : null
 
         }
         <button onClick={() => { setPage(page - 1);  }}>PreviousPage</button>
